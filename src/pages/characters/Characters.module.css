@@ -1,0 +1,8 @@
+.page {
+  padding: 26px 0;
+}
+
+.logo_wrapper {
+  display: flex;
+  justify-content: center;
+}
