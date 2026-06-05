@@ -1,0 +1,14 @@
+import Logo from '@assets/images/logo.svg?react'
+import classes from './Characters.module.css'
+
+const Characters = () => {
+  return (
+    <div className={classes.page}>
+      <div className={classes.logo_wrapper}>
+        <Logo />
+      </div>
+    </div>
+  )
+}
+
+export default Characters
