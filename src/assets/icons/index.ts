@@ -1,4 +1,5 @@
-import Logo from './logo.svg?react'
 import ArrowBack from './arrow_back.svg?react'
+import Caret from './caret.svg?react'
+import Logo from './logo.svg?react'
 
-export { ArrowBack, Logo }
+export { ArrowBack, Caret, Logo }

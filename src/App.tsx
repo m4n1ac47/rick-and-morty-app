@@ -1,7 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
+
 import MainLayout from './layouts/main/MainLayout'
-import Characters from './pages/characters/Characters'
 import Character from './pages/character/Character'
+import Characters from './pages/characters/Characters'
+
 import './App.css'
 
 function App() {
