@@ -1,4 +1,4 @@
-import Logo from '@assets/images/logo.svg?react'
+import { Logo } from '@assets/images'
 import classes from './Characters.module.css'
 
 const Characters = () => {

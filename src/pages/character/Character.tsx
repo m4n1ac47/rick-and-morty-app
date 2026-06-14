@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router'
 import classes from './Character.module.css'
-import { ArrowBack } from '@components/icon'
-import Loader from '@components/loader/Loader'
+import { ArrowBack } from '@assets/icons'
+import { Loader } from '@components'
 
 const Character = () => {
   const navigate = useNavigate()

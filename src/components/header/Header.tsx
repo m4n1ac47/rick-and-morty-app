@@ -1,4 +1,4 @@
-import { Logo } from '@components/icon'
+import { Logo } from '@assets/icons'
 import classes from './Header.module.css'
 
 const Header = () => {

@@ -1,5 +1,4 @@
-import Portal from '@assets/images/portal.svg?react'
-import PortalSmall from '@assets/images/portal_small.svg?react'
+import { Portal, PortalSmall } from '@assets/images'
 import classes from './Loader.module.css'
 
 interface ILoaderProps {
