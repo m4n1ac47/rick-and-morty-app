@@ -1,15 +1,10 @@
-import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
+import { type ReactNode, useEffect, useRef, useState } from 'react'
 
 import { Caret } from '@assets/icons'
 
 import classes from './Select.module.css'
 
-export interface IOption<T> {
-  label: string
-  value: T
-}
-
-interface ISelectOption<T> {
+export interface ISelectOption<T> {
   value: T
   label: string
 }
@@ -51,9 +46,7 @@ const Select = <T,>({
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  const selectedOption = useMemo(() => {
-    return options.find((option) => option.value === value)
-  }, [value, options])
+  const selectedOption = options.find((option) => option.value === value)
 
   const handleSelect = (value: T): void => {
     onChange?.(value)

@@ -1,14 +1,16 @@
 import { useState } from 'react'
 
 import { Logo } from '@assets/images'
-import { Select } from '@components'
-import { StatusIndicator } from '@components'
-import type { IOption } from '@components/select/Select'
-import type { TIndicatorStatus } from '@components/status-indicator/types'
+import {
+  type ISelectOption,
+  Select,
+  StatusIndicator,
+  type TIndicatorStatus
+} from '@components'
 
 import classes from './Characters.module.css'
 
-const mockOptionsSpecies: Array<IOption<string>> = [
+const mockOptionsSpecies: Array<ISelectOption<string>> = [
   { label: 'Human', value: 'human' },
   { label: 'Alien', value: 'alien' },
   { label: 'Humanoid', value: 'humanoid' },
@@ -16,7 +18,7 @@ const mockOptionsSpecies: Array<IOption<string>> = [
   { label: 'Robot', value: 'robot' }
 ]
 
-const mockOptionsStatus: Array<IOption<TIndicatorStatus>> = [
+const mockOptionsStatus: Array<ISelectOption<TIndicatorStatus>> = [
   { label: 'Active', value: 'active' },
   { label: 'Dead', value: 'dead' },
   { label: 'Unknown', value: 'unknown' }

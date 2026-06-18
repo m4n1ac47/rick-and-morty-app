@@ -1,7 +1,8 @@
 import React from 'react'
 
-import classes from './StatusIndicator.module.css'
 import type { TIndicatorStatus } from './types'
+
+import classes from './StatusIndicator.module.css'
 
 interface IStatusProps {
   status?: TIndicatorStatus
