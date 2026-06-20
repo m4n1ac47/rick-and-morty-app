@@ -1,0 +1,18 @@
+.statusIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusIndicator__active {
+  background-color: #12b800;
+}
+
+.statusIndicator__dead {
+  background-color: #df0000;
+}
+
+.statusIndicator__unknown {
+  background-color: #ff9900;
+}
