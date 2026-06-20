@@ -10,7 +10,7 @@ export interface ISelectOption<T> {
 }
 
 interface ISelectProps<T> {
-  fullWidth?: boolean
+  className?: string
   placeholder?: string
   options: ISelectOption<T>[]
   size?: 'small' | 'large'
@@ -25,7 +25,7 @@ const selectSizeClasses = {
 }
 
 const Select = <T,>({
-  fullWidth,
+  className,
   placeholder,
   options,
   size = 'large',
@@ -56,11 +56,7 @@ const Select = <T,>({
   return (
     <div
       ref={selectRef}
-      className={[
-        classes.select,
-        selectSizeClasses[size],
-        fullWidth && classes.select_fullWidth
-      ]
+      className={[classes.select, selectSizeClasses[size], className]
         .filter(Boolean)
         .join(' ')}
     >

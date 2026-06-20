@@ -42,14 +42,12 @@ const Characters = () => {
         }}
       >
         <Select
-          fullWidth
           value={species}
           onChange={(value) => setSpecies(value)}
           placeholder='Species'
           options={mockOptionsSpecies}
         />
         <Select
-          fullWidth
           value={status}
           onChange={setStatus}
           placeholder='Status'

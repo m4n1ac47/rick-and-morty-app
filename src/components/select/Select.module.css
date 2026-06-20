@@ -2,10 +2,6 @@
   position: relative;
 }
 
-.select_fullWidth {
-  width: 100%;
-}
-
 .select_size_large {
   .select__trigger {
     padding: 15px;
