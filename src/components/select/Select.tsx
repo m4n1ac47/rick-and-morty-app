@@ -1,6 +1,7 @@
 import { type ReactNode, useEffect, useRef, useState } from 'react'
 
 import { Caret } from '@assets/icons'
+import { classNames } from '@utils'
 
 import classes from './Select.module.css'
 
@@ -56,9 +57,7 @@ const Select = <T,>({
   return (
     <div
       ref={selectRef}
-      className={[classes.select, selectSizeClasses[size], className]
-        .filter(Boolean)
-        .join(' ')}
+      className={classNames(classes.select, selectSizeClasses[size], className)}
     >
       <button
         type='button'

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { classNames } from '@utils'
+
 import type { TIndicatorStatus } from './types'
 
 import classes from './StatusIndicator.module.css'
@@ -17,8 +19,9 @@ const statusIndicatorClasses = {
 const StatusIndicator: React.FC<IStatusProps> = ({ status = 'unknown' }) => {
   return (
     <div
-      className={[classes.statusIndicator, statusIndicatorClasses[status]].join(
-        ' '
+      className={classNames(
+        classes.statusIndicator,
+        statusIndicatorClasses[status]
       )}
     ></div>
   )
