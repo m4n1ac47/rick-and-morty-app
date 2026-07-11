@@ -1,7 +1,9 @@
 import { useState } from 'react'
 
+import { Search } from '@assets/icons'
 import { Logo } from '@assets/images'
 import {
+  Input,
   type ISelectOption,
   Select,
   StatusIndicator,
@@ -27,6 +29,7 @@ const mockOptionsStatus: Array<ISelectOption<TIndicatorStatus>> = [
 const Characters = () => {
   const [species, setSpecies] = useState<string>()
   const [status, setStatus] = useState<TIndicatorStatus>()
+  const [search, setSearch] = useState('')
 
   return (
     <div className={classes.page}>
@@ -87,6 +90,51 @@ const Characters = () => {
               <StatusIndicator status={option.value} />
             </>
           )}
+        />
+      </div>
+      <div
+        style={{
+          marginTop: 16,
+          display: 'flex',
+          gap: 16,
+          alignItems: 'flex-start'
+        }}
+      >
+        <Input
+          icon={<Search />}
+          placeholder='Uncontrolled'
+          defaultValue='Rick Sanchez'
+          onChange={(value) => setSearch(value)}
+        />
+        <Input
+          size='small'
+          icon={<Search />}
+          value={search}
+          onChange={(value) => setSearch(value)}
+          placeholder='Filter by name...'
+        />
+      </div>
+      <div
+        style={{
+          marginTop: 16,
+          display: 'flex',
+          gap: 16,
+          alignItems: 'flex-start'
+        }}
+      >
+        <Input
+          icon={<Search />}
+          variant='outlined'
+          placeholder='Filter by name...'
+          value={search}
+          onChange={(value) => setSearch(value)}
+        />
+        <Input
+          size='small'
+          icon={<Search />}
+          variant='outlined'
+          placeholder='Uncontrolled'
+          defaultValue='Some character'
         />
       </div>
     </div>

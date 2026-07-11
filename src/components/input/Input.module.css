@@ -1,0 +1,76 @@
+.input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.input__icon {
+  flex-shrink: 0;
+}
+
+.input__field {
+  all: unset;
+  width: 100%;
+  line-height: 22px;
+}
+
+.input_size_medium {
+  padding: 16px;
+}
+
+.input_size_small {
+  padding: 6px;
+}
+
+.input_variant_outline {
+  border: 1px solid light-dark(#000, #cacaca);
+  border-radius: 8px;
+}
+
+.input_variant_standard {
+  border-bottom: 1px solid light-dark(rgba(0, 0, 0, 0.5), #cacaca);
+  font-weight: 500;
+  padding: 6px;
+}
+
+.input_variant_standard .input__field {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.input_size_small .input__field {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.input__clearButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.input_size_medium .input__clearButton {
+  inset-inline-end: 16px;
+}
+
+.input_variant_standard .input__clearButton {
+  inset-inline-end: 8px;
+}
+
+.input_size_small .input__clearButton {
+  inset-inline-end: 8px;
+}
+
+.input_variant_standard .input__field {
+  padding-right: 16px;
+}
+
+.input_size_medium .input__field {
+  padding-right: 16px;
+}
