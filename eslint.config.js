@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import prettierPlugin from 'eslint-plugin-prettier'
 import prettierConfig from 'eslint-config-prettier'
-import simpleImportSort from "eslint-plugin-simple-import-sort"
+import simpleImportSort from 'eslint-plugin-simple-import-sort'
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -14,7 +14,7 @@ export default defineConfig([
     files: ['**/*.{ts,tsx}'],
     plugins: {
       prettier: prettierPlugin,
-      "simple-import-sort": simpleImportSort
+      'simple-import-sort': simpleImportSort
     },
     extends: [
       js.configs.recommended,
@@ -25,25 +25,28 @@ export default defineConfig([
     ],
     rules: {
       'prettier/prettier': ['error'],
-      "simple-import-sort/imports": ["error", {
-        groups: [
-          // React
-          ['^react$'],
-          // npm packages
-          ['^(?!@(assets|components|utils)(/|$))@?\\w'],
-          // aliases
-          ['^@(assets|components|utils)(/|$)'],
-          // relative imports
-          ['^\\.(?!.*\\.css$)'],
-          // styles
-          ['^.*\\.module\\.css$'],
-          ['^.*\\.css$'],
-        ]}
+      'simple-import-sort/imports': [
+        'error',
+        {
+          groups: [
+            // React
+            ['^react$'],
+            // npm packages
+            ['^(?!@(assets|components|utils)(/|$))@?\\w'],
+            // aliases
+            ['^@(assets|components|utils)(/|$)'],
+            // relative imports
+            ['^\\.(?!.*\\.(c|sc)ss$)'],
+            // styles
+            ['^.*\\.module\\.(c|sc)ss$'],
+            ['^.*\\.(c|sc)ss$']
+          ]
+        }
       ],
-      "simple-import-sort/exports": "error",
+      'simple-import-sort/exports': 'error'
     },
     languageOptions: {
-      globals: globals.browser,
-    },
-  },
+      globals: globals.browser
+    }
+  }
 ])

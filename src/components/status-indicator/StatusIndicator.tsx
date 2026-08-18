@@ -4,7 +4,7 @@ import { classNames } from '@utils'
 
 import type { TIndicatorStatus } from './types'
 
-import classes from './StatusIndicator.module.css'
+import classes from './StatusIndicator.module.scss'
 
 interface IStatusProps {
   status?: TIndicatorStatus

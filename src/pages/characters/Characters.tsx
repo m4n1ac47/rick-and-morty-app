@@ -10,7 +10,7 @@ import {
   type TIndicatorStatus
 } from '@components'
 
-import classes from './Characters.module.css'
+import classes from './Characters.module.scss'
 
 const mockOptionsSpecies: Array<ISelectOption<string>> = [
   { label: 'Human', value: 'human' },

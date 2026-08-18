@@ -3,7 +3,7 @@ import { type ReactNode, useEffect, useRef, useState } from 'react'
 import { Caret } from '@assets/icons'
 import { classNames } from '@utils'
 
-import classes from './Select.module.css'
+import classes from './Select.module.scss'
 
 export interface ISelectOption<T> {
   value: T

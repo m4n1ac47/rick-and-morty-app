@@ -1,5 +1,6 @@
 import { Portal, PortalSmall } from '@assets/images'
-import classes from './Loader.module.css'
+
+import classes from './Loader.module.scss'
 
 interface ILoaderProps {
   size?: 'small' | 'large'

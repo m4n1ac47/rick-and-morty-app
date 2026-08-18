@@ -5,7 +5,7 @@ import type { ChangeEvent, ReactNode } from 'react'
 import { Close } from '@assets/icons'
 import { classNames } from '@utils'
 
-import classes from './Input.module.css'
+import classes from './Input.module.scss'
 
 type TControlledInputProps = {
   value: string
