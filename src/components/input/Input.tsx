@@ -107,7 +107,7 @@ const Input: React.FC<TInputProps> = ({
           onClick={handleClear}
           disabled={isDisabled}
         >
-          <Close />
+          <Close className={classes.input__clearIcon} />
         </button>
       )}
     </div>

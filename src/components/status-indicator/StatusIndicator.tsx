@@ -11,7 +11,7 @@ interface IStatusProps {
 }
 
 const statusIndicatorClasses = {
-  active: classes.statusIndicator__active,
+  alive: classes.statusIndicator__active,
   dead: classes.statusIndicator__dead,
   unknown: classes.statusIndicator__unknown
 }

@@ -14,8 +14,14 @@
 }
 
 .select_size_small {
+  .select__placeholder {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
   .select__trigger {
-    padding: 5px;
+    padding: 2px 5px;
     padding-right: 20px;
   }
 
@@ -64,6 +70,10 @@
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
+
+  path {
+    fill: light-dark(#000, #fff);
+  }
 }
 
 .select__caret_open {

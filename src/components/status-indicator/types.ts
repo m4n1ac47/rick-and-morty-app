@@ -1,1 +1,1 @@
-export type TIndicatorStatus = 'active' | 'dead' | 'unknown'
+export type TIndicatorStatus = 'alive' | 'dead' | 'unknown'

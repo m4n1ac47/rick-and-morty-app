@@ -64,17 +64,13 @@ const Select = <T,>({
         className={classes.select__trigger}
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <span>
-          {selectedOption ? (
-            <span className={classes.select__placeholder}>
-              {renderOption
-                ? renderOption(selectedOption)
-                : selectedOption.label}
-            </span>
-          ) : (
-            <span className={classes.placeholder}>{placeholder}</span>
-          )}
-        </span>
+        {selectedOption ? (
+          <span className={classes.select__placeholder}>
+            {renderOption ? renderOption(selectedOption) : selectedOption.label}
+          </span>
+        ) : (
+          <span className={classes.placeholder}>{placeholder}</span>
+        )}
         <Caret
           className={`${classes.select__caret} ${isOpen ? classes.select__caret_open : ''}`}
         />
