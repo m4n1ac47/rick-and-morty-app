@@ -32,9 +32,9 @@ export default defineConfig([
             // React
             ['^react$'],
             // npm packages
-            ['^(?!@(assets|components|utils)(/|$))@?\\w'],
+            ['^(?!@(assets|components|utils|widgets)(/|$))@?\\w'],
             // aliases
-            ['^@(assets|components|utils)(/|$)'],
+            ['^@(assets|components|utils|widgets)(/|$)'],
             // relative imports
             ['^\\.(?!.*\\.(c|sc)ss$)'],
             // styles

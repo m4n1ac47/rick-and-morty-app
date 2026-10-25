@@ -1,0 +1,95 @@
+.character-card {
+  display: flex;
+  width: 508px;
+  height: 248px;
+  box-shadow: 1px 1px 4px 0 #00000040;
+  border-radius: 6px;
+  background-color: light-dark(#fff, #151515);
+  position: relative;
+  padding: 7px;
+  gap: 13px;
+
+  &__image {
+    width: 240px;
+    height: 234px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &:hover,
+  &--editing {
+    .character-card__actions {
+      visibility: visible;
+    }
+  }
+
+  &__actions {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    visibility: hidden;
+  }
+
+  &__action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    color: light-dark(#000, #fff);
+    text-decoration: none;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__option-title {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    color: light-dark(#3f3f3f, #fff);
+  }
+
+  &__option-value {
+    font-size: 14px;
+    line-height: 21px;
+    color: light-dark(rgb(0 0 0 / 60%), #cacaca);
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icon path {
+    fill: light-dark(#000, #fff);
+  }
+}
