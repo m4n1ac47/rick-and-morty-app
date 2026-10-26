@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 
 import type { ChangeEvent, ReactNode } from 'react'
 
-import { Close } from '@assets/icons'
+import { Close } from '@assets'
 import { classNames } from '@utils'
 
-import classes from './Input.module.css'
+import classes from './Input.module.scss'
 
 type TControlledInputProps = {
   value: string
@@ -44,7 +44,7 @@ const inputVariantClasses = {
   standard: classes.input_variant_standard
 }
 
-const Input: React.FC<TInputProps> = ({
+export const Input: React.FC<TInputProps> = ({
   placeholder,
   id,
   name,
@@ -107,11 +107,9 @@ const Input: React.FC<TInputProps> = ({
           onClick={handleClear}
           disabled={isDisabled}
         >
-          <Close />
+          <Close className={classes.input__clearIcon} />
         </button>
       )}
     </div>
   )
 }
-
-export default Input

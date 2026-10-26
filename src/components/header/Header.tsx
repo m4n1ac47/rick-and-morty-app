@@ -1,7 +1,8 @@
-import { Logo } from '@assets/icons'
-import classes from './Header.module.css'
+import { Logo } from '@assets'
 
-const Header = () => {
+import classes from './Header.module.scss'
+
+export const Header = () => {
   return (
     <header className={classes.header}>
       <div className={classes.container}>
@@ -10,5 +11,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header

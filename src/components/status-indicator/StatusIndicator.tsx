@@ -2,21 +2,22 @@ import React from 'react'
 
 import { classNames } from '@utils'
 
-import type { TIndicatorStatus } from './types'
+import classes from './StatusIndicator.module.scss'
 
-import classes from './StatusIndicator.module.css'
-
+export type TIndicatorStatus = 'alive' | 'dead' | 'unknown'
 interface IStatusProps {
   status?: TIndicatorStatus
 }
 
 const statusIndicatorClasses = {
-  active: classes.statusIndicator__active,
+  alive: classes.statusIndicator__active,
   dead: classes.statusIndicator__dead,
   unknown: classes.statusIndicator__unknown
 }
 
-const StatusIndicator: React.FC<IStatusProps> = ({ status = 'unknown' }) => {
+export const StatusIndicator: React.FC<IStatusProps> = ({
+  status = 'unknown'
+}) => {
   return (
     <div
       className={classNames(
@@ -26,5 +27,3 @@ const StatusIndicator: React.FC<IStatusProps> = ({ status = 'unknown' }) => {
     ></div>
   )
 }
-
-export default StatusIndicator

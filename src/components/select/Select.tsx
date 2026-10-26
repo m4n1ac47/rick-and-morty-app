@@ -1,9 +1,9 @@
 import { type ReactNode, useEffect, useRef, useState } from 'react'
 
-import { Caret } from '@assets/icons'
+import { Caret } from '@assets'
 import { classNames } from '@utils'
 
-import classes from './Select.module.css'
+import classes from './Select.module.scss'
 
 export interface ISelectOption<T> {
   value: T
@@ -25,7 +25,7 @@ const selectSizeClasses = {
   large: classes.select_size_large
 }
 
-const Select = <T,>({
+export const Select = <T,>({
   className,
   placeholder,
   options,
@@ -64,17 +64,13 @@ const Select = <T,>({
         className={classes.select__trigger}
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <span>
-          {selectedOption ? (
-            <span className={classes.select__placeholder}>
-              {renderOption
-                ? renderOption(selectedOption)
-                : selectedOption.label}
-            </span>
-          ) : (
-            <span className={classes.placeholder}>{placeholder}</span>
-          )}
-        </span>
+        {selectedOption ? (
+          <span className={classes.select__placeholder}>
+            {renderOption ? renderOption(selectedOption) : selectedOption.label}
+          </span>
+        ) : (
+          <span className={classes.placeholder}>{placeholder}</span>
+        )}
         <Caret
           className={`${classes.select__caret} ${isOpen ? classes.select__caret_open : ''}`}
         />
@@ -99,5 +95,3 @@ const Select = <T,>({
     </div>
   )
 }
-
-export default Select

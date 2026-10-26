@@ -29,10 +29,33 @@
   border-radius: 8px;
 }
 
+.input_size_small.input_variant_standard {
+  .input__field {
+    line-height: 21px;
+  }
+}
+
 .input_variant_standard {
-  border-bottom: 1px solid light-dark(rgba(0, 0, 0, 0.5), #cacaca);
+  position: relative;
   font-weight: 500;
-  padding: 6px;
+  padding: 0;
+
+  .input__field {
+    line-height: 30px;
+  }
+
+  padding-right: 10px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: light-dark(rgb(0 0 0 / 50%), #cacaca);
+  }
 }
 
 .input_variant_standard .input__field {
@@ -53,6 +76,10 @@
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
+}
+
+.input__clearIcon path {
+  fill: light-dark(#000, #fff);
 }
 
 .input_size_medium .input__clearButton {

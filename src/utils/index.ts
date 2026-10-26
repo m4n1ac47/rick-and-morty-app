@@ -1,2 +1,1 @@
-export type { TClassDictionary, TClassValue } from './classNames'
-export { classNames } from './classNames'
+export * from './classNames'

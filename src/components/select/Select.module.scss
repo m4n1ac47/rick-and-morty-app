@@ -14,8 +14,14 @@
 }
 
 .select_size_small {
+  .select__placeholder {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
   .select__trigger {
-    padding: 5px;
+    padding: 2px 5px;
     padding-right: 20px;
   }
 
@@ -48,7 +54,7 @@
 }
 
 .select__placeholder {
-  color: light-dark(rgba(0, 0, 0, 0.6), #cacaca);
+  color: light-dark(rgb(0 0 0 / 60%), #cacaca);
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
@@ -64,6 +70,10 @@
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
+
+  path {
+    fill: light-dark(#000, #fff);
+  }
 }
 
 .select__caret_open {
@@ -90,7 +100,7 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  color: light-dark(rgba(0, 0, 0, 0.6), #cacaca);
+  color: light-dark(rgb(0 0 0 / 60%), #cacaca);
   font-weight: 400;
   user-select: none;
 }
@@ -102,5 +112,5 @@
 }
 
 .select__option:hover {
-  background-color: rgba(0, 195, 255, 0.2);
+  background-color: rgb(0 195 255 / 20%);
 }

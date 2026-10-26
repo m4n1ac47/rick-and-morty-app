@@ -1,5 +1,6 @@
-import { Portal, PortalSmall } from '@assets/images'
-import classes from './Loader.module.css'
+import { Portal, PortalSmall } from '@assets'
+
+import classes from './Loader.module.scss'
 
 interface ILoaderProps {
   size?: 'small' | 'large'
@@ -11,7 +12,7 @@ const PortalMap = {
   large: Portal
 }
 
-const Loader = ({ size = 'large', text }: ILoaderProps) => {
+export const Loader = ({ size = 'large', text }: ILoaderProps) => {
   const Component = PortalMap[size]
 
   return (
@@ -21,5 +22,3 @@ const Loader = ({ size = 'large', text }: ILoaderProps) => {
     </div>
   )
 }
-
-export default Loader
