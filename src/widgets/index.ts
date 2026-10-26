@@ -1,8 +1,1 @@
-import CharacterCard from './character-card/CharacterCard'
-
-export type {
-  ICharacterCard,
-  ICharacterCardProps
-} from './character-card/CharacterCard'
-
-export { CharacterCard }
+export * from './character-card/CharacterCard'

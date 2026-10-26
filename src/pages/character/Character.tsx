@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router'
 
-import { ArrowBack } from '@assets/icons'
+import { ArrowBack } from '@assets'
 import { Loader } from '@components'
 
 import classes from './Character.module.scss'

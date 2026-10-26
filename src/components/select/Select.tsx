@@ -1,6 +1,6 @@
 import { type ReactNode, useEffect, useRef, useState } from 'react'
 
-import { Caret } from '@assets/icons'
+import { Caret } from '@assets'
 import { classNames } from '@utils'
 
 import classes from './Select.module.scss'
@@ -25,7 +25,7 @@ const selectSizeClasses = {
   large: classes.select_size_large
 }
 
-const Select = <T,>({
+export const Select = <T,>({
   className,
   placeholder,
   options,
@@ -95,5 +95,3 @@ const Select = <T,>({
     </div>
   )
 }
-
-export default Select

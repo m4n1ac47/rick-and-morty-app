@@ -3,8 +3,7 @@ import React from 'react'
 import type { ISelectOption, TIndicatorStatus } from '@components'
 import { Link } from 'react-router'
 
-import { CheckMark, Close, Edit } from '@assets/icons'
-import img from '@assets/images/rick-image.jpg'
+import { CheckMark, Close, Edit, rickImage } from '@assets'
 import { Input, Select, StatusIndicator } from '@components'
 import { classNames } from '@utils'
 
@@ -30,7 +29,7 @@ const characterStatusOptions: Array<ISelectOption<TIndicatorStatus>> = [
   { label: 'Unknown', value: 'unknown' }
 ]
 
-const CharacterCard = ({
+export const CharacterCard = ({
   item: initialItem,
   onChange
 }: ICharacterCardProps) => {
@@ -68,7 +67,7 @@ const CharacterCard = ({
     >
       <img
         className='character-card__image'
-        src={img}
+        src={rickImage}
         alt='image'
       />
       <div className='character-card__info'>
@@ -164,5 +163,3 @@ const CharacterCard = ({
     </div>
   )
 }
-
-export default CharacterCard
