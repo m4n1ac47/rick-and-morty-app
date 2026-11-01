@@ -80,7 +80,8 @@ export const Input: React.FC<TInputProps> = ({
   }
 
   return (
-    <div
+    <label
+      id={id}
       className={classNames(
         classes.input,
         inputSizeClasses[size],
@@ -110,6 +111,6 @@ export const Input: React.FC<TInputProps> = ({
           <Close className={classes.input__clearIcon} />
         </button>
       )}
-    </div>
+    </label>
   )
 }
